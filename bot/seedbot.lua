@@ -217,21 +217,22 @@ function create_config( )
     "get",
     "broadcast",
     "download_media",
-    "invite"
+    "invite",
+    "all"
     },
-    sudo_users = {121189712,123064250,0,tonumber(our_id)},--Sudo users
+    sudo_users = {121189712,123064250,173979569,tonumber(our_id)},--Sudo users
     disabled_channels = {},
     realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[ POWERBOT v1
+    about_text = [[Teleseed v1
 An advance Administration bot based on yagop/telegram-bot 
 
 https://github.com/SEEDTEAM/TeleSeed
 
 Admins
-@Shahabsaf [Founder]
-@POWER_SUDO [Developer]
-@POWER_SUDO [Manager]
+@iwals [Founder]
+@imandaneshi [Developer]
+@seyedan25 [Manager]
 
 Special thanks to
 awkward_potato
@@ -240,115 +241,113 @@ topkecleon
 Vamptacus
 
 Our channels
-@powerbotpro [persian]
+@teleseedch [English]
 ]],
     help_text = [[
-لیست دستور ها :
 Commands list :
 
-کيک کردن:(با ريپلي هم انجام ميشود)
 !kick [username|id]
 You can also do it by reply
 
-بن کردن :(با ريپلي هم انجام ميشود)
 !ban [ username|id]
 You can also do it by reply
-آن بن کردن :(با ريپلي هم انجام ميشود)
+
 !unban [id]
 You can also do it by reply
-ليست اعضاي گروه:
+
 !who
 Members list
-ليست مديران گروه:
+
 !modlist
 Moderators list
-مدير کردن کسي :(فقط براي صاحب گروه)
+
 !promote [username]
 Promote someone
-از مدير در اوردن:(فقط براي صاحب گروه)
+
 !demote [username]
 Demote someone
-خارج شدن از گروه:
+
 !kickme
 Will kick user
-درباره ي گروه:
+
 !about
 Group description
-تنظيم عکس گروه:
+
 !setphoto
 Set and locks group photo
-تنظيم اسم گروه:
+
 !setname [name]
 Set group name
-قوانين گروه:
+
 !rules
 Group rules
-نمايش آيدي گروه:
+
 !id
 return group id or user id
-آموزش :
+
 !help
-قفل کردن اسم يا افراد
-!lock [member|name]
-Locks [member|name]
-باز کردن اعضا،اسم،عکس:
-!unlock [member|name|photo]
-Unlocks [member|name|photo]
-تعيين قوانين:
+
+!lock [member|name|bots]
+Locks [member|name|bots] 
+
+!unlock [member|name|photo|bots]
+Unlocks [member|name|photo|bots]
+
 !set rules <text>
 Set <text> as rules
-تعيين درباره ي گروه:
+
 !set about <text>
 Set <text> as about
-نمايش تنظيماته اعمال شده
+
 !settings
 Returns group settings
-لينک جديد
+
 !newlink
 create/revoke your group link
-گرفتن لينک
+
 !link
 returns group link
-نمايش آيدي صاحب گروه
+
 !owner
 returns group owner id
-تغيير صاحب گروه
+
 !setowner [id]
 Will set id as owner
-تنطيم ميزان حساسيت به اسپم
+
 !setflood [value]
 Set [value] as flood sensitivity
 
 !stats
 Simple message statistics
-ذخيره سازي کلمات
+
 !save [value] <text>
 Save <text> as [value]
-دريافت کلمات
+
 !get [value]
 Returns text of [value]
-تخليه سازي مديران،قوانين،متن درباره
+
 !clean [modlist|rules|about]
 Will clear [modlist|rules|about] and set it to nil
-گرفتن آيدي کاربر
+
 !res [username]
 returns user id
 "!res @username"
-نمايش عملکرد دستورات داده شده
+
 !log
 will return group logs
-نمايش اعضاي مسدود شده
+
 !banlist
-شما ميتوانيد هم از بک اسلش (/) و هم از علامت تعجب (!) استفاده کنيد
+will return group ban list
+
 **U can use both "/" and "!" 
-براي کيک کردن فرد از گروه از دستور
-[!/]kick (username|id)
--براي بن کردن فرد از گروه از دستور
-[!/]ban ( username|id)
--براي انبن کردن فرد از گروه از دستور
-[!/]unban (id)
-براي هر سه امکان بالا ميتوانيد از ريپلاي هم استفاده کنيد??
-by : POWER_SUDO
+
+
+*Only owner and mods can add bots in group
+
+
+*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+
+*Only owner can use res,setowner,promote,demote and log commands
 
 ]]
 
